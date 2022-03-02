@@ -4,7 +4,7 @@ resource "aws_lambda_function" "this" {
   runtime                        = "nodejs12.x"
   handler                        = "index.handler"
   timeout                        = 5
-  reserved_concurrent_executions = 3
+  reserved_concurrent_executions = -1
 
   environment {
     variables = {
